@@ -1,0 +1,8 @@
+casa
+apontador
+ponteiro
+banana
+beliche
+pedra
+python
+espinho
