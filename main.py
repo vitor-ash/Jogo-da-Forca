@@ -1,22 +1,24 @@
 from random import choice
+from sys import exit
 
 tentativas: int = 6
 palavra_original = "python".upper()
 
 try:
-    with open("Jogo da Forca/words.txt", "r") as palavras:
+    with open("words.txt", "r") as palavras:
         lista_palavras: list[str] = []
         for letra in palavras:
             lista_palavras.append(letra)
         
         if len(lista_palavras) == 0:
-            raise ValueError("Nenhuma palavra encontrada!")
+            print("Nenhuma palavra encontrada! Jogo finalizado.")
+            exit()
         
         palavra_original = choice(lista_palavras)
 except FileNotFoundError:
     print("Arquivo de palavras não encontrado!")
+    exit()
     
-
 def palavra(lista: set[str]):
     lista_final: list[str] = []
     for letter in palavra_original:
@@ -39,7 +41,7 @@ if __name__ == "__main__":
     # print("")
     
     while tentativas:
-        letra = input("Digite uma letra: ").upper()
+        letra = input("Digite uma letra: ").strip().upper()
         if not letra.isalpha() or len(letra) > 1:
             print("Letra inválida! Tente outra vez.")
             continue
