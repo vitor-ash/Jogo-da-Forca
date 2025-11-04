@@ -2,13 +2,13 @@ from random import choice
 from sys import exit
 
 tentativas: int = 6
-palavra_original = "python".upper()
+palavra_original: str
 
 try:
     with open("words.txt", "r") as palavras:
         lista_palavras: list[str] = []
         for letra in palavras:
-            lista_palavras.append(letra)
+            lista_palavras.append(letra.strip().upper())
         
         if len(lista_palavras) == 0:
             print("Nenhuma palavra encontrada! Jogo finalizado.")
@@ -67,6 +67,3 @@ if __name__ == "__main__":
         elif tentativas == 0:
             print(f"Fim de jogo! A palavra era: {palavra_original}")
             break
-
-
-        
