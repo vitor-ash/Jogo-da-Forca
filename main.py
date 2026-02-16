@@ -1,11 +1,15 @@
 from random import choice
 from sys import exit
+from pathlib import Path
+
+base = Path(__file__).parent
+arquivo = base / "words.txt"
 
 tentativas: int = 6
 palavra_original: str
 
 try:
-    with open("words.txt", "r") as palavras:
+    with open(arquivo, "r") as palavras:
         lista_palavras: list[str] = []
         for letra in palavras:
             lista_palavras.append(letra.strip().upper())
@@ -32,12 +36,12 @@ def palavra(lista: set[str]):
 if __name__ == "__main__":
     lista_letras: set[str] = set()
 
-    print("Bem-vindo ao Jogo da Forca!\n")
+    print("Bem-vindo(a) ao Jogo da Forca!\n")
     # print("")
     print(f"Palavra: {palavra(lista_letras)}\n")
     # print("")
     print(f"Tentativas restantes: {tentativas}")
-    print("Letras tentadas: Nenhuma\n")
+    print("Letras tentadas: nenhuma\n")
     # print("")
     
     while tentativas:
