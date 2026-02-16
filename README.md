@@ -31,21 +31,29 @@ jogo-da-forca <br />
 ## Jogando o Jogo da Forca
 
 No começo, nós temos uma palavra escolhida aleatoriamente na lista em ```words.txt```, com todas as suas letras ocultas. Nos é pedido para digitarmos uma letra:
+
 ![inicial](assets/tela_inicial.png)
 
 ---
 
 Após digitarmos a letra, o programa nos dirá se a letra está ou não está na palavra. Caso esteja, será mostrado:
+
 ![certo](assets/tentativa_certa.png)
+
 Do contrário:
+
 ![falho](assets/tentativa_falha.png)
 
 ---
 
 Continuando o jogo, o jogador poderá, de maneira vitoriosa, acertar a palavra:
+
 ![ganho](assets/jogo_ganho.png)
+
 Ou, infelizmente, perder o jogo:
+
 ![perda](assets/jogo_perdido.png)
+
 
 ---
 
