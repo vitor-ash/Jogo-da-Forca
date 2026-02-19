@@ -3,7 +3,7 @@ from sys import exit
 from pathlib import Path
 
 base = Path(__file__).parent
-arquivo = base / "words.txt"
+arquivo = base / "palavras.txt"
 
 tentativas: int = 6
 palavra_original: str
